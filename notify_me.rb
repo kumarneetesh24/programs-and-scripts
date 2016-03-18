@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'libnotify'
 
 def read_charge
@@ -30,7 +32,7 @@ def notify_status
       end
       note.show!
     end
-    Kernel.sleep 5
+    Kernel.sleep 20
   end
 end
 
