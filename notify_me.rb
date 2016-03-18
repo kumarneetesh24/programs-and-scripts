@@ -20,7 +20,6 @@ def notify_status
   # using libnotify
   loop do
     if read_charge == 100  && power_plugged_status.nonzero?
-      p power_plugged_status
       note = Libnotify.new do |notify|
         notify.summary = "Battery 100%"
         notify.body = "Please remove the charger"
